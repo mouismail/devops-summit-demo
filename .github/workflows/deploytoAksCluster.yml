@@ -14,7 +14,7 @@ jobs:
     - name: Build and push image to ACR
       id: build-image
       run: |
-        docker build "$GITHUB_WORKSPACE/devops-summit-demo/" -f  "devops-summit-demo/Dockerfile" -t devopssummit.azurecr.io/devopssummit:${{ github.sha }} --label dockerfile-path=devops-summit-demo/Dockerfile
+        docker build "$GITHUB_WORKSPACE/" -f  "Dockerfile" -t devopssummit.azurecr.io/devopssummit:${{ github.sha }} --label dockerfile-path=devops-summit-demo/Dockerfile
         docker push devopssummit.azurecr.io/devopssummit:${{ github.sha }}
     
     - uses: azure/k8s-set-context@v1

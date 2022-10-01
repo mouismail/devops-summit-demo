@@ -1,15 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: "devopssummit-1a6f"
+    name: "devopssummit-demo-svc"
+    namespace: "devops-demo"
     labels:
-        app: "devopssummit-1a6f"
+        app: "devopssummit-demo"
 spec:
     type: LoadBalancer
     ports:
     - port: 3200
-      targetPort: 3200
+      targetPort: 2300
       protocol: TCP
       name: http
     selector:
-        app: "devopssummit-1a6f"
+        app: "devopssummit-demo"

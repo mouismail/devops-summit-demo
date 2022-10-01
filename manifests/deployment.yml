@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "devopssummit-1a6f"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "devopssummit-1a6f"
+  template:
+    metadata:
+      labels:
+        app: "devopssummit-1a6f"
+    spec:
+      containers:
+        - name: "devopssummit-1a6f"
+          image: "devopssummit.azurecr.io/devopssummit"
+          ports:
+          - containerPort: 3200

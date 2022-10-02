@@ -6,8 +6,8 @@ on:
     types: [closed]
     branches: main
 env:
-  CLUSTER_NAME: ${{ secrets.AKS_CLUSTER_NAME }}
-  CLUSTER_RESOURCE_GROUP: ${{ secrets.AKS_CLUSTER_RESOURCE_GROUP }}
+  CLUSTER_NAME: devops-summit-staging
+  CLUSTER_RESOURCE_GROUP: geekle
 
 jobs:
   delete-pr-namespaces:

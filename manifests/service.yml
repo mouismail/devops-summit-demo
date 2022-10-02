@@ -1,16 +1,20 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: "devopssummit-demo-svc"
-    namespace: "devops-demo"
-    labels:
-        app: "devopssummit-demo"
+  name: azure-vote-front
 spec:
-    type: LoadBalancer
-    ports:
-    - port: 3200
-      targetPort: 2300
-      protocol: TCP
-      name: http
-    selector:
-        app: "devopssummit-demo"
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: azure-vote-front
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: azure-vote-back
+spec:
+  ports:
+  - port: 6379
+  selector:
+    app: azure-vote-back

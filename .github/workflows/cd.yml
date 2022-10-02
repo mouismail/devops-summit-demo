@@ -6,8 +6,6 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - ".github/**"
   workflow_dispatch:
 
 concurrency: 
@@ -18,11 +16,11 @@ env:
   CLUSTER_RESOURCE_GROUP: geekle
 
   PROD_CLUSTER_NAME: devops-summit
-  PROD_NAMESPACE: production
+  PROD_NAMESPACE: devops-summit
   PROD_SECRET: avf-secret
 
   STAGING_CLUSTER_NAME: devops-summit-staging
-  STAGING_NAMESPACE: staging
+  STAGING_NAMESPACE: devops-summit
   STAGING_SECRET: avf-secret
   
 jobs:
@@ -145,7 +143,7 @@ jobs:
       runs-on: ubuntu-latest
       needs: [deploy-staging, validate-staging]
       environment: 
-        name: Production
+        name: prod
         url: http://${{steps.load_balancer_IP.outputs.external_ip}}
       outputs:
         aks_external_ip: ${{ env.aks_external_ip }}   

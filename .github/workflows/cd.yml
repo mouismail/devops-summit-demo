@@ -15,13 +15,13 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  CLUSTER_RESOURCE_GROUP: ${{secrets.AKS_CLUSTER_RESOURCE_GROUP}}
+  CLUSTER_RESOURCE_GROUP: geekle
 
-  PROD_CLUSTER_NAME: ${{secrets.AKS_CLUSTER_NAME}}
+  PROD_CLUSTER_NAME: ${{ secrets.AKS_CLUSTER_NAME }}
   PROD_NAMESPACE: production
   PROD_SECRET: avf-secret
 
-  STAGING_CLUSTER_NAME: ${{secrets.AKS_CLUSTER_NAME}}
+  STAGING_CLUSTER_NAME: ${{ secrets.AKS_CLUSTER_NAME }}
   STAGING_NAMESPACE: staging
   STAGING_SECRET: avf-secret
   

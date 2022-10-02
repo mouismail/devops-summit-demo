@@ -6,14 +6,14 @@ on:
     types: [closed]
     branches: main
 env:
-  CLUSTER_NAME: ${{secrets.AKS_CLUSTER_NAME}}
-  CLUSTER_RESOURCE_GROUP: ${{secrets.AKS_CLUSTER_RESOURCE_GROUP}}
+  CLUSTER_NAME: ${{ secrets.AKS_CLUSTER_NAME }}
+  CLUSTER_RESOURCE_GROUP: ${{ secrets.AKS_CLUSTER_RESOURCE_GROUP }}
 
 jobs:
   delete-pr-namespaces:
     runs-on: ubuntu-latest
     outputs:
-      deploymentEnvironments: ${{steps.environment_list.outputs.environmentNameList}}
+      deploymentEnvironments: ${{ steps.environment_list.outputs.environmentNameList }}
       matrix-combinations: ${{ steps.setup-matrix.outputs.matrix-combinations }}
     steps:
     - name: Get and Delete Deployment Environments from PR

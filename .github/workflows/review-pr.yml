@@ -4,8 +4,8 @@ on:
   issue_comment:
     
 env:
-  CLUSTER_NAME: ${{secrets.AKS_CLUSTER_NAME}}
-  CLUSTER_RESOURCE_GROUP: ${{secrets.AKS_CLUSTER_RESOURCE_GROUP}}
+  CLUSTER_NAME: ${{ secrets.AKS_CLUSTER_NAME }}
+  CLUSTER_RESOURCE_GROUP: ${{ secrets.AKS_CLUSTER_RESOURCE_GROUP }}
   SECRET: avf-secret
   REQUIRED_CHECK: Build and Scan Container
   

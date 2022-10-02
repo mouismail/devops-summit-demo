@@ -17,7 +17,7 @@ concurrency:
 env:
   CLUSTER_RESOURCE_GROUP: geekle
 
-  PROD_CLUSTER_NAME: ${{ secrets.AKS_CLUSTER_NAME }}
+  PROD_CLUSTER_NAME: devops-summit
   PROD_NAMESPACE: production
   PROD_SECRET: avf-secret
 
@@ -55,7 +55,7 @@ jobs:
 
   deploy-staging:
       runs-on: ubuntu-latest
-      needs: [build-image-ghcr]
+      needs: [build-and-push]
       environment: 
         name: Staging
         url: http://${{steps.load_balancer_IP.outputs.external_ip}}
@@ -116,7 +116,7 @@ jobs:
   validate-staging:
     name: ✔️ Validate Staging
     runs-on: ubuntu-latest
-    needs: [deploy-staging, build-image-ghcr]
+    needs: [deploy-staging, build-and-push]
     steps:
     - name: Check the deployed service URL
       uses: jtalk/url-health-check-action@v1.2

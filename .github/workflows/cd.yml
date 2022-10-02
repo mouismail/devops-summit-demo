@@ -21,13 +21,13 @@ env:
   PROD_NAMESPACE: production
   PROD_SECRET: avf-secret
 
-  STAGING_CLUSTER_NAME: ${{ secrets.AKS_CLUSTER_NAME }}
+  STAGING_CLUSTER_NAME: devops-summit-staging
   STAGING_NAMESPACE: staging
   STAGING_SECRET: avf-secret
   
 jobs:
 
-  build-image-ghcr:
+  build-and-push:
       runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@main

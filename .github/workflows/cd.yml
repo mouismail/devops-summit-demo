@@ -13,14 +13,14 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  CLUSTER_RESOURCE_GROUP: geekle
+  CLUSTER_RESOURCE_GROUP: ${{ secrets.CLUSTER_RESOURCE_GROUP }}
 
-  PROD_CLUSTER_NAME: devops-summit
-  PROD_NAMESPACE: devops-summit
+  PROD_CLUSTER_NAME: ${{ secrets.PROD_CLUSTER_NAME }}
+  PROD_NAMESPACE: ${{ secrets.PROD_NAMESPACE }}
   PROD_SECRET: avf-secret
 
-  STAGING_CLUSTER_NAME: devops-summit-staging
-  STAGING_NAMESPACE: devops-summit
+  STAGING_CLUSTER_NAME: ${{ secrets.STAGING_CLUSTER_NAME }}
+  STAGING_NAMESPACE: ${{ secrets.STAGING_NAMESPACE }}
   STAGING_SECRET: avf-secret
   
 jobs:

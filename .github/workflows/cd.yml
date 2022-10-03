@@ -143,7 +143,7 @@ jobs:
       runs-on: ubuntu-latest
       needs: [deploy-staging, validate-staging]
       environment: 
-        name: prod
+        name: Production
         url: http://${{steps.load_balancer_IP.outputs.external_ip}}
       outputs:
         aks_external_ip: ${{ env.aks_external_ip }}   

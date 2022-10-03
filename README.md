@@ -30,7 +30,7 @@ This demo for Geekle DevOps Summit '22
     - modify `azure-vote/azure-vote/config_file.cfg` to update homepage values
 4. Create a PR, utilize review-lab keyword comment - if desired.
 5. Show AKS Cluster to demonstrate any namespace updates/changes.
-6. Merge PR, observe that **Cleanup PR** and **AKS Staging & Production - Deploy** workflows kick off
+6. Merge PR, observe that **AKS Staging & Production - Deploy** workflows kick off
 7. View Staging and Production environment deployments
 
 

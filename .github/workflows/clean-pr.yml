@@ -33,7 +33,6 @@ jobs:
       if: ${{steps.environment_list.outputs.deploymentsFound != 'true'}}
       run: |
         echo 'Deployments found value: false'
-        exit 1
 
     # Set the target Azure Kubernetes Service (AKS) cluster. 
     - uses: azure/aks-set-context@v1

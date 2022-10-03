@@ -46,14 +46,10 @@ To walk through a complete experience where this code is packaged into container
 
 # References
 
-## Microsoft Teams
-GitHub is the world's leading software development platform. Microsoft Teams is one of the most popular communication platforms where modern development teams come together to build world-class products and services. With two of your most important workspaces connected, you'll stay updated on what's happening on GitHub without leaving Microsoft Teams.
-- https://github.com/integrations/microsoft-teams
-
 ## GitHub Actions
 Environments - You can configure environments with protection rules and secrets. When a workflow job references an environment, the job won't start until all of the environment's protection rules pass.
-- https://docs.github.com/en/actions/reference/environments
+- [GitHub Environments](https://docs.github.com/en/actions/reference/environments)
 
 ## GitHub Container Registry
 You can store and manage Docker and OCI images in the Container registry, which uses the package namespace https://ghcr.io.
-- https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry
+- [GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry)

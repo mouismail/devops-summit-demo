@@ -42,7 +42,7 @@
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [2300, 6379],
+	"forwardPorts": [2022, 6379],
 
 	"postCreateCommand": "docker-compose build",
 	

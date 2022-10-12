@@ -11,7 +11,6 @@ description: "Demo for Geekle DevOps Summit 22 to use GitHub Actions to build an
 ---
 
 # Geekle DevOps Summit 22 - GitHub Actions Demo
-
 This demo for Geekle DevOps Summit '22
 - [Geekle Global DevOps Summit '22](https://events.geekle.us/devops/) - October 4&5, 2022
 
